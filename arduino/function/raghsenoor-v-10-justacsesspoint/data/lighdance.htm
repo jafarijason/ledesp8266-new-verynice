@@ -1,0 +1,385 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+  <title>RGB-IOT</title>
+ 
+</head>
+<style>
+.button {
+ 
+}
+</style>
+<body id="index"  onload="" style="  
+
+margin:0; padding:0;
+background: #453256; /* For browsers that do not support gradients */
+ background: -webkit-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* Standard syntax */
+ 
+">
+
+<div align="center">
+
+<h1 style="font-size:8vw;
+
+
+    position: relative;
+    top: 1em;
+    font-size: 8vw;
+    color: white;
+    background-color: rgba(100, 20, 80, 0.49);
+
+" align="">Light Dance  Controll</h1>
+ 
+</div>
+
+<div align="center">
+
+ 
+</div>
+  
+  
+  
+  
+  
+<div align="center">
+ 
+
+
+</div>
+
+
+<div align="center">
+
+
+<button  class="button"    style="  
+    position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance1()" 
+    >LIGHT DANCE 1</button>
+
+
+
+
+<button  class="button"    style="  
+     position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance2()" 
+    >LIGHT DANCE 2</button>
+
+	
+ 
+<button  class="button"    style="  
+     position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: red;
+	 background-image: linear-gradient(-90deg , blue , green,red );
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance3()" 
+    >LIGHT DANCE 3</button>
+
+	
+ 
+<button  class="button"    style="  
+     position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: red;
+	background-image: linear-gradient(-90deg ,#ffff00, #00ffff, #ff00ff);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance4()" 
+    >LIGHT DANCE 4</button>
+ 
+	
+<button  class="button"    style="  
+     position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: red;
+	background-image: linear-gradient(-90deg ,#ffdc00, #ff005a, #00ff48);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance5()" 
+    >LIGHT DANCE 5</button>
+	
+	
+<button  class="button"    style="  
+     position: relative;
+    top: 3em;
+    border-color: white;
+    background-color: red;
+	background-image: linear-gradient(-90deg ,#a800ff, #00ffc6, #aeff00);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	 
+" 
+onclick="lightdance6()" 
+    >LIGHT DANCE 6</button>
+	
+ 
+</div>
+
+<div  align="center" class="slidecontainer">
+  <input id="gangesloder" type="range" min="3" max="40" value="8" class="slider" id="myRange"
+   style="  
+     position: relative;
+    top: 4.5em;
+	width:70%;
+    border-color: white;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+"
+
+onchange="hasasiatesensormic();" 
+  >
+</div>
+ 
+
+<script>
+
+function lightdance1() {
+ 
+ 
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse1", true);
+  xhttp.send();
+  
+  
+}
+
+function lightdance2() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse2", true);
+  xhttp.send();
+  
+  
+}
+
+
+
+function lightdance3() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse3", true);
+  xhttp.send();
+  
+  
+}
+
+
+
+function lightdance4() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse4", true);
+  xhttp.send();
+  
+  
+}
+
+
+
+function lightdance5() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse5", true);
+  xhttp.send();
+  
+  
+}
+ 
+ 
+ 
+ 
+
+function lightdance6() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "raghse6", true);
+  xhttp.send();
+  
+  
+}
+ 
+ 
+ 
+function hasasiatesensormic() {
+var ali =   document.getElementById('gangesloder').value;
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "hasasiatesensormictanzim?hasasiatesensormictanzim="+ali, true);
+  xhttp.send();
+  
+  
+}
+
+ 
+ 
+</script>
+
+<div align="center">
+ 
+ 
+
+</div>
+  
+<div align="center">
+
+
+<a href="index.htm" class="button"    style="  
+    
+    position: relative;
+    top: 9em;
+    border-color: white;
+    background-color: #0100ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #51884d;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+"  >HOME</a>
+
+
+</div>
+
+</body>
+</html>

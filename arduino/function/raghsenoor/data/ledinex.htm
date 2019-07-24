@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RGB-CONTROLL</title>
+
+  <script src="jquery1124.js"></script>
+  <link rel="stylesheet" href="bootstrapmin.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap-thememin.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="bootstrapmin.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="z.js"></script>
+
+  <link rel="stylesheet" href="jqxbase.css" type="text/css" />
+  <script src="jqx-all.js"></script>
+  <script type="text/javascript" src="jqxcore.js"></script>
+</head>
+<body>
+<div style="text-align:center">
+  <p id="status" style="background:#ddd;font-weight:bold"></p>
+  <h1>Color Picker</h1>
+</div>
+<div id="colorPicker" style="position: relative; margin: auto;"></div>
+<script>
+
+    $(document).ready(function() {
+
+
+        $("#colorPicker").jqxColorPicker({
+            width: 300,
+            height: 300,
+            colorMode: 'saturation'
+        });
+
+        $('#colorPicker').bind('colorchange', function (event)
+        {
+            var color = $("#colorPicker").jqxColorPicker('getColor');
+            var hex = color.hex;
+            var rgb = color.r + "," + color.g + "," + color.b;
+            Z.call('set_color', [color.r, color.g, color.b]);
+        });
+
+        // initialize the Z object
+        Z.init({
+            on_connected:  function(){$("#status").html("CONNECTED")},
+            on_error:  function(){$("#status").html("ERROR")},
+            on_disconnected:  function(){$("#status").html("DISCONNECTED"); return true},
+            on_online:  function(evt){$("#status").html("ONLINE");},
+            on_offline:  function(evt){$("#status").html("OFFLINE");},
+            on_event:  function(evt){
+                //display received event;
+            }
+        })
+    });
+
+</script>
+
+</body>
+</html>

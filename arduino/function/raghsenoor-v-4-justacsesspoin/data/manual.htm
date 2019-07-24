@@ -1,0 +1,180 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<script src="jscolor.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+  <title>RGB-IOT</title>
+ 
+</head>
+<style>
+.button {
+ 
+}
+</style>
+<body id="index"  onload="" style="  
+
+margin:0; padding:0;
+background: #453256; /* For browsers that do not support gradients */
+ background: -webkit-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(left, #ff0000  , #e7ff19a8, #19ff8a, #19fff4,  #08a6e6); /* Standard syntax */
+ 
+">
+
+<div align="center">
+
+<h1 style="font-size:8vw;
+
+
+    position: relative;
+    top: 1em;
+    font-size: 8vw;
+    color: white;
+    background-color: rgba(100, 20, 80, 0.49);
+
+" align="">MANUAL</h1>
+
+
+<a href="index.htm" class="button"    style="  
+    
+    position: relative;
+    top:16em;
+    border-color: white;
+    background-color: #0100ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #51884d;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+"  >HOME</a>
+</div>
+
+<div align="center">
+
+
+
+
+
+<div style="position:absolute; left:280px; top:10px;    
+
+
+  visibility: hidden;
+  
+  
+  " >
+    toHEXString = <span id="hex-str"></span><br />
+    toRGBString = <span id="rgb-str"></span><br />
+    R, G, B = <span id="rgb"></span><br />
+    H, S, V = <span id="hsv"></span>
+</div>
+
+<input id="ali" class="jscolor {onFineChange:'update(this)  '} " value="000000"  style="
+  text-align: center;
+    position: absolute;
+	    height: 12%;
+	    width: 50%;
+		left: 25%;
+    top: 17em;
+	pointer-events:none;
+
+" readonly >
+
+
+
+<button  onclick="document.getElementById('ali').jscolor.show()"  class="button"    style="  
+     position: relative;
+    top: 7em;
+    border-color: white;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+"  >PICK COLOR</button>
+ 
+<script>
+function update(picker) {
+    document.getElementById('hex-str').innerHTML = picker.toHEXString();
+    document.getElementById('rgb-str').innerHTML = picker.toRGBString();
+
+    document.getElementById('rgb').innerHTML =
+        Math.round(picker.rgb[0]) + ', ' +
+        Math.round(picker.rgb[1]) + ', ' +
+        Math.round(picker.rgb[2]);
+
+    document.getElementById('hsv').innerHTML =
+        Math.round(picker.hsv[0]) + '&deg;, ' +
+        Math.round(picker.hsv[1]) + '%, ' +
+        Math.round(picker.hsv[2]) + '%';
+	 
+		
+		 var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    
+    }
+  };
+  xhttp.open("GET", "setcolor?redval="+Math.round(picker.rgb[0])+"&greenval="+Math.round(picker.rgb[1])+"&blueval="+Math.round(picker.rgb[2])+"&delayf=1", true);
+  xhttp.send();
+  
+  
+}
+</script>
+
+
+
+
+ 
+</div>
+  
+  
+  
+  
+  
+<div align="center">
+
+  
+</div>
+
+
+<div align="center">
+
+ 
+
+</div>
+
+
+
+<div align="center">
+ 
+
+ 
+
+</div>
+  
+<div align="center">
+
+
+
+</div>
+
+</body>
+</html>
