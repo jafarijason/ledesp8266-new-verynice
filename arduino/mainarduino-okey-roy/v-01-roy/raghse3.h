@@ -39,7 +39,7 @@ maxvarianse =varianse;
     
 
      
-  if((millis() - delayraghsenoor) > 15){
+  if((millis() - delayraghsenoor) > 5){
 
    
      

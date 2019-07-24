@@ -1,7 +1,7 @@
  
 void raghse5(){
 
-if((millis() - delayraghsenoor) > 100){
+if((millis() - delayraghsenoor) > 500){
 
       analogWrite(blue, 0);
 
@@ -39,7 +39,7 @@ maxvarianse =varianse;
     
 
      
-  if((millis() - delayraghsenoor) > 15){
+  if((millis() - delayraghsenoor) > 5){
 
    
      

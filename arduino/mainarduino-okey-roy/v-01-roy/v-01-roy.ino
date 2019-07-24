@@ -5,6 +5,7 @@ int flasherdelaylocal = 0 ;
 int flasheron = 15;
   int redflash ,greenflash,blueflash;
   int flash6state = 0 ;
+  int valueraghsemin ;
 
   int redghabl6 = 255 ;  int greenghabl6 = 255 ;  int blueghabl6 = 255 ;
   unsigned long flasherdelaytime6change = 0;  
@@ -252,6 +253,7 @@ analogWriteRange(255);
  SPIFFS.begin();
     server.on("/"               ,[](){File f=SPIFFS.open("/index.htm"      ,"r"); Serial.println("---------------");server.streamFile(f,"text/html"      );f.close();});
     server.on("/index.htm"      ,[](){File f=SPIFFS.open("/index.htm"      ,"r"); Serial.println("---------------");server.streamFile(f,"text/html"      );f.close();});
+    server.on("/roy.jpg"       ,[](){File f=SPIFFS.open("/roy.jpg"       ,"r");server.streamFile(f,"image/jpg"      );f.close();});
     server.on("/mainflasher.htm"      ,[](){File f=SPIFFS.open("/mainflasher.htm"      ,"r"); Serial.println("---------------");server.streamFile(f,"text/html"      );f.close();});
   
       server.on("/changepass.htm"      ,[](){File f=SPIFFS.open("/changepass.htm"      ,"r"); Serial.println("---------------");server.streamFile(f,"text/html"      );f.close();});
@@ -381,7 +383,7 @@ flasherdelaylocal =  400;
  
 
 void loop() {
-
+valueraghsemin = 200;
   int resetstate =   digitalRead(resetbottom);  ;
 
 if (resetstate ==1){

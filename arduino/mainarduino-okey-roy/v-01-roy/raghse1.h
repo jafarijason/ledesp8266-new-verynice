@@ -34,7 +34,7 @@ if((millis() - maxvariansetime) > 2000){
 
 void raghse1(){
 
-if((millis() - delayraghsenoor) > 100){
+if((millis() - delayraghsenoor) > 500){
 
       analogWrite(blue, 0);
 
@@ -74,26 +74,29 @@ maxvarianse =varianse;
    if(farsadint > 255){
     farsadint = 255;
    }
-   if(farsadint < 170){
-    farsadint = 170;
+   if(farsadint < 240){
+    farsadint = 240;
    }
-   int yekdovom =  (farsadint/6);
-    int yeksevom =  (farsadint/12);
+   int yekdovom =  (farsadint/2);
+    int yeksevom =  (farsadint/4);
+    if (valueraghsemin > yeksevom ){
+      valueraghsemin =yeksevom - 20;
+    }
     Serial.print(farsadint);Serial.print("-"  );
      Serial.print ( yekdovom  );Serial.print("-"  );
      Serial.print("-" );   Serial.print(maxvarianse); Serial.print("-"  );Serial.println(yeksevom);
 
 
      
-  if((millis() - delayraghsenoor) > 15){
+  if((millis() - delayraghsenoor) > 5){
 
    
      
 if(raghsenoorrang ==1){
   
-      analogWrite(red,  random(0, farsadint));
+      analogWrite(red,  random(valueraghsemin, farsadint));
 
-       analogWrite(green, random(0, yekdovom));
+       analogWrite(green, random(valueraghsemin, yekdovom));
  
       analogWrite(blue, 0);
       
@@ -101,45 +104,45 @@ if(raghsenoorrang ==1){
   
       analogWrite(red,  0);
 
-       analogWrite(green, random(0, farsadint));
+       analogWrite(green, random(valueraghsemin, farsadint));
  
-      analogWrite(blue,random(0, yekdovom));
+      analogWrite(blue,random(valueraghsemin, yekdovom));
       
 }else if(raghsenoorrang ==3){
   
-      analogWrite(red,  random(0, yekdovom));
+      analogWrite(red,  random(valueraghsemin, yekdovom));
 
        analogWrite(green,0);
  
-      analogWrite(blue, random(0, farsadint));
+      analogWrite(blue, random(valueraghsemin, farsadint));
       
 }else if(raghsenoorrang ==4){
   
-      analogWrite(red,  random(0, farsadint));
+      analogWrite(red,  random(valueraghsemin, farsadint));
 
        analogWrite(green,0);
  
-      analogWrite(blue, random(0, farsadint));
+      analogWrite(blue, random(valueraghsemin, farsadint));
       
 }else if(raghsenoorrang ==5){
   
       analogWrite(red,0);
 
-       analogWrite(green, random(0, farsadint));
+       analogWrite(green, random(valueraghsemin, farsadint));
  
-      analogWrite(blue, random(0, farsadint));
+      analogWrite(blue, random(valueraghsemin, farsadint));
       
 }else if(raghsenoorrang ==6){
   
-      analogWrite(red, random(0, farsadint));
+      analogWrite(red, random(valueraghsemin, farsadint));
 
-       analogWrite(green, random(0, farsadint));
+       analogWrite(green, random(valueraghsemin, farsadint));
  
       analogWrite(blue,0);
       
 }else if(raghsenoorrang ==7){
   
-      analogWrite(red, random(0, farsadint));
+      analogWrite(red, random(valueraghsemin, farsadint));
 
        analogWrite(green, 0);
  
@@ -149,7 +152,7 @@ if(raghsenoorrang ==1){
   
       analogWrite(red, 0);
 
-       analogWrite(green, random(0, farsadint));
+       analogWrite(green, random(valueraghsemin, farsadint));
  
       analogWrite(blue,0);
       
@@ -159,15 +162,15 @@ if(raghsenoorrang ==1){
 
        analogWrite(green, 0);
  
-      analogWrite(blue,random(0, farsadint));
+      analogWrite(blue,random(valueraghsemin, farsadint));
       
 }else if(raghsenoorrang ==9){
   
-      analogWrite(red, random(0,yeksevom));
+      analogWrite(red, random(valueraghsemin,yeksevom));
 
-       analogWrite(green, random(0,yeksevom));
+       analogWrite(green, random(valueraghsemin,yeksevom));
  
-      analogWrite(blue,random(0,yeksevom));
+      analogWrite(blue,random(valueraghsemin,yeksevom));
       
 }
 
